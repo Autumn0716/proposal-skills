@@ -8,15 +8,21 @@
 
 <div align="center">
 
-*Born from the philosophy of* [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) *and* [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
+*Born from the philosophy of*
+
+[superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md)
+
+*and*
+
+[grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
 
 </div>
 
 ---
 
-你对 Agent 说"加个功能"，它秒速写代码，交付时才发现——做出来的不是你要的。这不是它不聪明，是你和它之间横亘着一道信息差。
+你和 Agent 之间，隔着一道信息差——就像跨部门交接，你脑子里有完整上下文，对方只拿到一句话。你以为说清了，对方以为懂了，交付才发现做的不是你要的。
 
-`brainstorming` 教会我们动手前先把想法变成文档、交给用户过目；`grill-me` 教会我们追问要狠、决策分支走到底、模糊地带不留到实现阶段。`proposal` 把这两种哲学熔铸成四道不可跳过的闸门——每次交付前强制校准，信息差逐步压缩，直到归零。
+`brainstorming` 教我们动手前先写文档、交用户过目；`grill-me` 教我们追问到底、模糊地带不留到实现。`proposal` 熔铸二者为四道不可跳过的闸门——交付前强制校准，信息差逐步压缩，直到归零。
 
 > **All you need is `/proposal`.**
 
@@ -44,11 +50,16 @@
 ## 安装
 
 ```bash
-mkdir -p ~/.claude/skills/proposal/references && \
-curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/SKILL.md -o ~/.claude/skills/proposal/SKILL.md && \
-curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/grill-questions.md -o ~/.claude/skills/proposal/references/grill-questions.md && \
-curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/plan-template.md -o ~/.claude/skills/proposal/references/plan-template.md && \
-curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/traceability-matrix.md -o ~/.claude/skills/proposal/references/traceability-matrix.md
+git clone https://github.com/Autumn0716/proposal-skills.git /tmp/proposal-skills
+
+# 安装到 personal skills
+cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.claude/skills/proposal/
+
+# 或安装到 agents skills
+cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.agents/skills/proposal/
+
+# 清理
+rm -rf /tmp/proposal-skills
 ```
 
 安装后即可使用：
