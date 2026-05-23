@@ -8,29 +8,15 @@
 
 <div align="center">
 
-*Born from the philosophy of* [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) *and* [grill-me](https://github.com/anthropics/claude-plugins-official)*— two skills that taught us: the hardest part of building something isn't writing code, it's making sure you're building the right thing.*
+*Born from the philosophy of* [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) *and* [grill-me](https://github.com/anthropics/claude-plugins-official)
 
 </div>
 
 ---
 
-## 为什么需要 Proposal
+你对 Agent 说"加个功能"，它秒速写代码，交付时才发现——做出来的不是你要的。这不是它不聪明，是你和它之间横亘着一道信息差。
 
-你一定经历过这种时刻——
-
-你对 Agent 说"加个功能"，它秒速开始写代码。十分钟后交付了，你一看：方向偏了，细节错了，该想的没想。你叹口气说"不是这个意思"，它改了一版又偏到另一边。来来回回，沟通成本远大于编码成本。
-
-**这不是 Agent 不够聪明。这是你和它之间横亘着一道信息差。**
-
-就像跨部门协作——你脑中装着完整上下文：为什么要做、给谁做、做了之后会怎样。而对方只拿到一句话。你以为自己说清楚了，对方以为自己理解了，双方各怀假设往前冲，交付日才发现——做出来的不是你要的。
-
-这个问题的根源不是智力，是**对齐**。信息从你的脑中传递到 Agent 的上下文，每经过一个环节都在损耗。你说的和它理解的，从来不是同一件事。
-
-`superpowers:brainstorming` 教会我们：在动手之前，先把想法变成设计，把设计变成文档，把文档交给用户过目。一行代码都不写，直到用户点头说"这就是我要的"。
-
-`grill-me` 教会我们：追问要狠，一个问题一个问题地剥，每个决策分支都走到底，能从代码库找到答案的就不问用户。不把模糊地带留到实现阶段。
-
-`proposal` 把这两种哲学熔铸成一道不可跳过的工序——**四道闸门，每次交付前强制校准。信息差在每道关口被逐步压缩，直到归零。**
+`brainstorming` 教会我们动手前先把想法变成文档、交给用户过目；`grill-me` 教会我们追问要狠、决策分支走到底、模糊地带不留到实现阶段。`proposal` 把这两种哲学熔铸成四道不可跳过的闸门——每次交付前强制校准，信息差逐步压缩，直到归零。
 
 > **All you need is `/proposal`.**
 
@@ -51,7 +37,7 @@
 | ⚡ **Execute** | todo 驱动，逐步验证 | 禁绝 scope creep，三步不过即回退 |
 | ✅ **Review** | 改动 vs 需求双向追溯 | 任何一个 ❌ 都保持 goal 活跃，绝不交付半成品 |
 
-四道闸门，环环相扣。**Elicit** 确保"做正确的事"，**Plan** 确保"正确地做事"，**Execute** 确保"按计划做事"，**Review** 确保"做到了再说做到了"。一个目的：**交付那一刻，不再有意外。**
+**四道闸门。一个目的：交付那一刻，不再有意外。**
 
 ---
 
