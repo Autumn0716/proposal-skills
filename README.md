@@ -1,68 +1,4 @@
-<div align="center">
-
-# Proposal
-
-**Narrow the information gap between you and your Agent**
-
-</div>
-
-<div align="center">
-
-*Born from the philosophy of [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) and [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)*
-
-</div>
-
 ---
-
-There's an information gap between you and your Agent — just like handing off work across departments. You have the full context in your head; they get a single sentence. You think you've explained it. They think they understand. By delivery day, what's built isn't what you asked for.
-
-`brainstorming` taught us: write it down first, get user sign-off before a single line of code. `grill-me` taught us: dig deep, resolve every decision branch, leave no ambiguity for implementation. `proposal` fuses both into four non-negotiable gates — forced alignment before every delivery, compressing the information gap to zero.
-
-> **All you need is `/proposal`.**
-
----
-
-## Four Gates
-
-```
- Elicit ────▶ Plan ────▶ Execute ────▶ Review
-   │            │           │            │
-   🎯           📋          ⚡           ✅
-```
-
-| Gate | What it does | Alignment guarantee |
-|------|-------------|---------------------|
-| 🎯 **Elicit** | brainstorm → grill-me deep-dive | No code until you approve the design doc |
-| 📋 **Plan** | Write plan → independent audit | Third-party reviews coverage + quality; redo if it fails |
-| ⚡ **Execute** | Todo-driven, step-by-step verification | No scope creep; revert after 3 consecutive failures |
-| ✅ **Review** | Changes vs. requirements bidirectional traceability | Any ❌ keeps the goal active; no half-done deliveries |
-
-**Four gates. One purpose: no surprises at delivery.**
-
----
-
-## Install
-
-```bash
-git clone https://github.com/Autumn0716/proposal-skills.git /tmp/proposal-skills
-
-# Personal skills
-cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.claude/skills/proposal/
-
-# Or agent skills
-cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.agents/skills/proposal/
-
-# Cleanup
-rm -rf /tmp/proposal-skills
-```
-
-- Manual: `/proposal`
-- Auto-trigger: "add a feature", "implement X", "make a proposal"
-
-[中文文档](README_zh.md)
-
----
-
 
 # Proposal — Structured Feature Development
 
@@ -70,7 +6,7 @@ Never jump to implementation. Complete each phase gate before proceeding.
 
 ## Phase 1: Elicit — Understand
 
-Invoke `/superpowers:brainstorming` first. Do not write any code until the design is approved. Then use `grill-me` to resolve remaining ambiguities the design doc left open.
+Inject both `/superpowers:brainstorming` and `grill-me`. Use them iteratively — brainstorm to surface intent, grill-me to sharpen details, then loop back if new ambiguities emerge. Keep asking until both you and the user are fully satisfied that nothing is left unresolved. Do not write any code until the design is approved.
 
 **Gate**: User confirms "that's everything" on a written requirements summary.
 
@@ -84,9 +20,15 @@ Then spawn an independent reviewer agent to audit the plan against Phase 1 requi
 
 ## Phase 3: Execute — Goal-Tracked Implementation
 
-Create a todo list from the plan steps. Implement one step at a time, verifying each (lint, type-check, test) before marking complete. If a step fails verification 3 times, revert and consult a senior reviewer agent.
+Create a task list from the plan steps using these status markers:
 
-**Gate**: All todos completed. No scope creep — do not add features, refactor adjacent code, or fix pre-existing issues not in the plan.
+- `○` — Pending (not started)
+- `✅` — Completed (verified)
+- `⚠️` — Warning (attempted but not actually fulfilled; needs attention)
+
+Implement one step at a time, verifying each (lint, type-check, test) before marking `✅`. If a step was attempted but the verification did not actually pass, mark it `⚠️` — never pretend a task is done. If a step fails verification 3 times, revert and consult a senior reviewer agent.
+
+**Gate**: All tasks marked `✅`. No `⚠️` remaining. No scope creep.
 
 ## Phase 4: Review — Verify Alignment
 
@@ -99,6 +41,8 @@ If any check fails: do NOT deliver. Keep the goal active. Fix and re-run Review.
 **Gate**: All checks green. Every change traces to a requirement, every requirement traces to a verified change.
 
 ## References
+
+References live in `~/.agents/skills/proposal/references/`.
 
 - `references/grill-questions.md` — Elicit phase: brainstorming 9-step checklist, grill-me 4 hard rules, anti-patterns
 - `references/plan-template.md` — Full implementation plan template

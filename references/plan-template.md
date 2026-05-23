@@ -96,10 +96,15 @@ Steps that MUST be sequential: <list>
 
 ## Execution Log
 
+Task status markers:
+- `○` Pending (not started)
+- `✅` Completed (verified and confirmed working)
+- `⚠️` Warning (attempted but not actually fulfilled — needs attention)
+
 | Step | Status | Started | Completed | Notes |
 |------|--------|---------|-----------|-------|
-| 1    | ⬜     |         |           |       |
-| 2    | ⬜     |         |           |       |
+| 1    | ○      |         |           |       |
+| 2    | ○      |         |           |       |
 
 ---
 
