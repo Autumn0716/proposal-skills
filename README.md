@@ -8,7 +8,7 @@
 
 <div align="center">
 
-*Born from the philosophy of* [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) *and* [grill-me](https://github.com/anthropics/claude-plugins-official)
+*Born from the philosophy of* [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) *and* [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
 
 </div>
 
