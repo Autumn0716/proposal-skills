@@ -2,7 +2,7 @@
 
 # Proposal
 
-**缩小你和 Agent 之间的信息差**
+**Narrow the information gap between you and your Agent**
 
 </div>
 
@@ -14,11 +14,86 @@
 
 ---
 
+There's an information gap between you and your Agent — just like handing off work across departments. You have the full context in your head; they get a single sentence. You think you've explained it. They think they understand. By delivery day, what's built isn't what you asked for.
+
+`brainstorming` taught us: write it down first, get user sign-off before a single line of code. `grill-me` taught us: dig deep, resolve every decision branch, leave no ambiguity for implementation. `proposal` fuses both into four non-negotiable gates — forced alignment before every delivery, compressing the information gap to zero.
+
+> **All you need is `/proposal`.**
+
+---
+
+[中文版](#proposal-中文版)
+
+---
+
+## Four Gates
+
+```
+ Elicit ────▶ Plan ────▶ Execute ────▶ Review
+   │            │           │            │
+   🎯           📋          ⚡           ✅
+```
+
+| Gate | What it does | Alignment guarantee |
+|------|-------------|---------------------|
+| 🎯 **Elicit** | brainstorm → grill-me deep-dive | No code until you approve the design doc |
+| 📋 **Plan** | Write plan → independent audit | Third-party reviews coverage + quality; redo if it fails |
+| ⚡ **Execute** | Todo-driven, step-by-step verification | No scope creep; revert after 3 consecutive failures |
+| ✅ **Review** | Changes vs. requirements bidirectional traceability | Any ❌ keeps the goal active; no half-done deliveries |
+
+**Four gates. One purpose: no surprises at delivery.**
+
+---
+
+## Install
+
+```bash
+git clone https://github.com/Autumn0716/proposal-skills.git /tmp/proposal-skills
+
+# Personal skills
+cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.claude/skills/proposal/
+
+# Or agent skills
+cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.agents/skills/proposal/
+
+# Cleanup
+rm -rf /tmp/proposal-skills
+```
+
+- Manual: `/proposal`
+- Auto-trigger: "add a feature", "implement X", "make a proposal"
+
+---
+
+---
+
+<a id="proposal-中文版"></a>
+
+<div align="center">
+
+# Proposal
+
+**缩小你和 Agent 之间的信息差**
+
+</div>
+
+<div align="center">
+
+*诞生于 [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) 与 [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) 的设计哲学*
+
+</div>
+
+---
+
 你和 Agent 之间，隔着一道信息差——就像跨部门交接，你脑子里有完整上下文，对方只拿到一句话。你以为说清了，对方以为懂了，交付才发现做的不是你要的。
 
 `brainstorming` 教我们动手前先写文档、交用户过目；`grill-me` 教我们追问到底、模糊地带不留到实现。`proposal` 熔铸二者为四道不可跳过的闸门——交付前强制校准，信息差逐步压缩，直到归零。
 
 > **All you need is `/proposal`.**
+
+---
+
+[English](#proposal)
 
 ---
 
@@ -56,7 +131,6 @@ cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.agents/sk
 rm -rf /tmp/proposal-skills
 ```
 
-安装后即可使用：
 - 手动调用：`/proposal`
 - 自动触发：说 "add a feature"、"implement X"、"make a proposal"
 
