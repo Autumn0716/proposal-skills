@@ -1,3 +1,24 @@
+# Proposal
+
+> **All you need is `/proposal`.**
+
+你和 Agent 之间，隔着一道信息差。
+
+就像工作中把需求交给同级部门——你脑子里有完整的上下文，对方只拿到一句话。你以为说清楚了，对方以为理解了。两边都按自己的假设往前冲，交付那天才发现：做出来的东西不是你要的。
+
+这不是 Agent 不够聪明。是你和它之间少了一道**强制对齐**的工序。
+
+`proposal` 把这道工序做成不可跳过的流程：
+
+| 阶段 | 做什么 | 怎么保证对齐 |
+|------|--------|------------|
+| **Elicit** | brainstorm → grill-me 追问到底 | 设计文档必须经你过目批准，一行代码都不写 |
+| **Plan** | 制定计划书 → subagent 审计 | oracle/momus 审查覆盖率 + 方案质量，不过则重来 |
+| **Execute** | todo 驱动逐步实现 | 禁绝 scope creep，三步验证，失败即回退 |
+| **Review** | 改动 vs 需求双向追溯 | 任何一个 ❌ 都保持 goal 活跃，不交付半成品 |
+
+四道闸门。一个目的：**让你和 Agent 在每道关口校准一次，交付那一刻不再有意外。**
+
 > Inspired by [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) and [grill-me](https://github.com/anthropics/claude-plugins-official).
 
 ---
