@@ -1,23 +1,60 @@
+<div align="center">
+
 # Proposal
+
+**缩小你和 Agent 之间的信息差**
+
+</div>
+
+---
+
+你一定经历过这种时刻——
+
+你对 Agent 说"加个功能"，它秒速开始写代码。十分钟后交付了，你一看：方向偏了，细节错了，该想的没想。
+
+**不是它不够聪明，是你和它之间缺少一道对齐的工序。**
+
+就像跨部门协作：你脑中有完整上下文，对方只拿到一句话。你以为说清了，对方以为懂了，交付日才发现——做出来的不是你要的。
+
+`proposal` 把这道工序变成**不可跳过的闸门**。四道关卡，每次交付前强制校准。信息差在每道关口被逐步压缩，直到归零。
 
 > **All you need is `/proposal`.**
 
-你和 Agent 之间，隔着一道信息差。
+---
 
-就像工作中把需求交给同级部门——你脑子里有完整的上下文，对方只拿到一句话。你以为说清楚了，对方以为理解了。两边都按自己的假设往前冲，交付那天才发现：做出来的东西不是你要的。
+## 四道闸门
 
-这不是 Agent 不够聪明。是你和它之间少了一道**强制对齐**的工序。
+```
+ Elicit ────▶ Plan ────▶ Execute ────▶ Review
+   │            │           │            │
+   🎯           📋          ⚡           ✅
+```
 
-`proposal` 把这道工序做成不可跳过的流程：
+| 闸门 | 做什么 | 对齐承诺 |
+|------|--------|----------|
+| 🎯 **Elicit** | brainstorm 追问 → grill-me 深挖 | 设计文档经你批准前，一行代码都不写 |
+| 📋 **Plan** | 制定计划书 → 独立审计 | 第三方审查覆盖率 + 方案质量，不过则重来 |
+| ⚡ **Execute** | todo 驱动，逐步验证 | 禁绝 scope creep，三步不过即回退 |
+| ✅ **Review** | 改动 vs 需求双向追溯 | 任何一个 ❌ 都保持 goal 活跃，绝不交付半成品 |
 
-| 阶段 | 做什么 | 怎么保证对齐 |
-|------|--------|------------|
-| **Elicit** | brainstorm → grill-me 追问到底 | 设计文档必须经你过目批准，一行代码都不写 |
-| **Plan** | 制定计划书 → subagent 审计 | oracle/momus 审查覆盖率 + 方案质量，不过则重来 |
-| **Execute** | todo 驱动逐步实现 | 禁绝 scope creep，三步验证，失败即回退 |
-| **Review** | 改动 vs 需求双向追溯 | 任何一个 ❌ 都保持 goal 活跃，不交付半成品 |
+**四道闸门。一个目的：交付那一刻，不再有意外。**
 
-四道闸门。一个目的：**让你和 Agent 在每道关口校准一次，交付那一刻不再有意外。**
+---
+
+## 快速开始
+
+```bash
+# 安装到 personal skills
+cp -r skills/proposal ~/.claude/skills/proposal
+
+# 或安装到 agents skills
+cp -r skills/proposal ~/.agents/skills/proposal
+```
+
+- 手动调用：`/proposal`
+- 自动触发：说 "add a feature"、"implement X"、"make a proposal"
+
+---
 
 > Inspired by [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) and [grill-me](https://github.com/anthropics/claude-plugins-official).
 

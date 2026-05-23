@@ -86,7 +86,7 @@ Steps that MUST be sequential: <list>
 
 ## Audit Result
 
-**Auditor**: <oracle/momus>
+**Auditor**: <independent reviewer>
 **Result**: PASS / FAIL
 **Confidence**: High / Medium / Low
 **Gaps found**: <list or "none">
