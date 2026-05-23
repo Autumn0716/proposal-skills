@@ -24,15 +24,15 @@ Then spawn an independent reviewer agent to audit the plan against Phase 1 requi
 
 ## Phase 3: Execute — Goal-Tracked Implementation
 
-Create a task list from the plan steps using these status markers:
+Create a task list from the plan steps using checkbox-style markers:
 
-- `○` — Pending (not started)
-- `✅` — Completed (verified)
-- `⚠️` — Warning (attempted but not actually fulfilled; needs attention)
+- `[ ]` — Pending (not started)
+- `[✅]` — Completed (verified)
+- `[⚠️]` — Warning (attempted but not actually fulfilled; needs attention)
 
-Implement one step at a time, verifying each (lint, type-check, test) before marking `✅`. If a step was attempted but the verification did not actually pass, mark it `⚠️` — never pretend a task is done. If a step fails verification 3 times, revert and consult a senior reviewer agent.
+Implement one step at a time, verifying each (lint, type-check, test) before marking `[✅]`. If a step was attempted but the verification did not actually pass, mark it `[⚠️]` — never pretend a task is done. If a step fails verification 3 times, revert and consult a senior reviewer agent.
 
-**Gate**: All tasks marked `✅`. No `⚠️` remaining. No scope creep.
+**Gate**: All tasks marked `[✅]`. No `[⚠️]` remaining. No scope creep.
 
 ## Phase 4: Review — Verify Alignment
 
