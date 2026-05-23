@@ -15,7 +15,7 @@ Invoke `/superpowers:brainstorming` first. Do not write any code until the desig
 
 ## Phase 2: Plan — Create and Audit
 
-Write an implementation plan to `.sisyphus/plans/<feature>-<YYYY-MM-DD>.md` using the template in `references/plan-template.md`.
+Write an implementation plan to `docs/plan/<feature>-<YYYY-MM-DD>.md` using the template in `references/plan-template.md`.
 
 Then spawn oracle or momus to audit the plan against Phase 1 requirements. The audit must assess both coverage (every req has a step, every step has a req) and quality (is the approach viable, are edge cases handled, are dependencies correct). If FAIL, revise and re-audit until PASS.
 
