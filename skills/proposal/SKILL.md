@@ -1,7 +1,3 @@
-> Inspired by [superpowers:brainstorming](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) and [grill-me](https://github.com/anthropics/claude-plugins-official).
-
----
-
 ---
 name: proposal
 description: This skill should be used when the user asks to "add a feature", "implement something", "create a new functionality", "build X", "make a proposal", "I want to add", "I need a new", or describes a project-related change that requires planning before implementation. Provides a structured 4-phase workflow: Elicit → Plan → Execute → Review, ensuring complete requirement understanding, plan-user alignment, and change verification before delivery.
