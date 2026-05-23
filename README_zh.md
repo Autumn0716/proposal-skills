@@ -2,27 +2,27 @@
 
 # Proposal
 
-**Narrow the information gap between you and your Agent**
+**缩小你和 Agent 之间的信息差**
 
 </div>
 
 <div align="center">
 
-*Born from the philosophy of [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) and [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)*
+*诞生于 [superpowers:brainstorming](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md) 与 [grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) 的设计哲学*
 
 </div>
 
 ---
 
-There's an information gap between you and your Agent — just like handing off work across departments. You have the full context in your head; they get a single sentence. You think you've explained it. They think they understand. By delivery day, what's built isn't what you asked for.
+你和 Agent 之间，隔着一道信息差——就像跨部门交接，你脑子里有完整上下文，对方只拿到一句话。你以为说清了，对方以为懂了，交付才发现做的不是你要的。
 
-`brainstorming` taught us: write it down first, get user sign-off before a single line of code. `grill-me` taught us: dig deep, resolve every decision branch, leave no ambiguity for implementation. `proposal` fuses both into four non-negotiable gates — forced alignment before every delivery, compressing the information gap to zero.
+`brainstorming` 教我们动手前先写文档、交用户过目；`grill-me` 教我们追问到底、模糊地带不留到实现。`proposal` 熔铸二者为四道不可跳过的闸门——交付前强制校准，信息差逐步压缩，直到归零。
 
 > **All you need is `/proposal`.**
 
 ---
 
-## Four Gates
+## 四道闸门
 
 ```
  Elicit ────▶ Plan ────▶ Execute ────▶ Review
@@ -30,36 +30,36 @@ There's an information gap between you and your Agent — just like handing off 
    🎯           📋          ⚡           ✅
 ```
 
-| Gate | What it does | Alignment guarantee |
-|------|-------------|---------------------|
-| 🎯 **Elicit** | brainstorm → grill-me deep-dive | No code until you approve the design doc |
-| 📋 **Plan** | Write plan → independent audit | Third-party reviews coverage + quality; redo if it fails |
-| ⚡ **Execute** | Todo-driven, step-by-step verification | No scope creep; revert after 3 consecutive failures |
-| ✅ **Review** | Changes vs. requirements bidirectional traceability | Any ❌ keeps the goal active; no half-done deliveries |
+| 闸门 | 做什么 | 对齐承诺 |
+|------|--------|----------|
+| 🎯 **Elicit** | brainstorm 追问 → grill-me 深挖 | 设计文档经你批准前，一行代码都不写 |
+| 📋 **Plan** | 制定计划书 → 独立审计 | 第三方审查覆盖率 + 方案质量，不过则重来 |
+| ⚡ **Execute** | todo 驱动，逐步验证 | 禁绝 scope creep，三步不过即回退 |
+| ✅ **Review** | 改动 vs 需求双向追溯 | 任何一个 ❌ 都保持 goal 活跃，绝不交付半成品 |
 
-**Four gates. One purpose: no surprises at delivery.**
+**四道闸门。一个目的：交付那一刻，不再有意外。**
 
 ---
 
-## Install
+## 安装
 
 ```bash
 git clone https://github.com/Autumn0716/proposal-skills.git /tmp/proposal-skills
 
-# Personal skills
+# 安装到 personal skills
 cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.claude/skills/proposal/
 
-# Or agent skills
+# 或安装到 agents skills
 cp -r /tmp/proposal-skills/SKILL.md /tmp/proposal-skills/references ~/.agents/skills/proposal/
 
-# Cleanup
+# 清理
 rm -rf /tmp/proposal-skills
 ```
 
-- Manual: `/proposal`
-- Auto-trigger: "add a feature", "implement X", "make a proposal"
+- 手动调用：`/proposal`
+- 自动触发：说 "add a feature"、"implement X"、"make a proposal"
 
-[中文文档](README_zh.md)
+[English](README.md)
 
 ---
 
