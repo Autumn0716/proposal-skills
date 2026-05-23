@@ -1,4 +1,4 @@
-# Claude Skills
+# proposal-skills
 
 Custom Claude Code skills.
 
