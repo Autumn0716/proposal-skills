@@ -1,6 +1,6 @@
 # Plan Document Template
 
-Save plans to `docs/plan/<feature-name>-<timestamp>.md`.
+Save plans to `docs/plans/<feature-name>-<timestamp>.md`.
 
 ```markdown
 # Proposal: <Feature Name>
