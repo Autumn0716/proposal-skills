@@ -41,16 +41,17 @@
 
 ---
 
-## 快速开始
+## 安装
 
 ```bash
-# 安装到 personal skills
-cp -r skills/proposal ~/.claude/skills/proposal
-
-# 或安装到 agents skills
-cp -r skills/proposal ~/.agents/skills/proposal
+mkdir -p ~/.claude/skills/proposal/references && \
+curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/SKILL.md -o ~/.claude/skills/proposal/SKILL.md && \
+curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/grill-questions.md -o ~/.claude/skills/proposal/references/grill-questions.md && \
+curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/plan-template.md -o ~/.claude/skills/proposal/references/plan-template.md && \
+curl -fsSL https://raw.githubusercontent.com/Autumn0716/proposal-skills/main/references/traceability-matrix.md -o ~/.claude/skills/proposal/references/traceability-matrix.md
 ```
 
+安装后即可使用：
 - 手动调用：`/proposal`
 - 自动触发：说 "add a feature"、"implement X"、"make a proposal"
 
@@ -75,13 +76,13 @@ Invoke `/superpowers:brainstorming` first. Do not write any code until the desig
 
 Write an implementation plan to `docs/plan/<feature>-<YYYY-MM-DD>.md` using the template in `references/plan-template.md`.
 
-Then spawn oracle or momus to audit the plan against Phase 1 requirements. The audit must assess both coverage (every req has a step, every step has a req) and quality (is the approach viable, are edge cases handled, are dependencies correct). If FAIL, revise and re-audit until PASS.
+Then spawn an independent reviewer agent to audit the plan against Phase 1 requirements. The audit must assess both coverage (every req has a step, every step has a req) and quality (is the approach viable, are edge cases handled, are dependencies correct). If FAIL, revise and re-audit until PASS.
 
 **Gate**: Plan passes audit AND user approves.
 
 ## Phase 3: Execute — Goal-Tracked Implementation
 
-Create a todo list from the plan steps. Implement one step at a time, verifying each (lint, type-check, test) before marking complete. If a step fails verification 3 times, revert and consult oracle.
+Create a todo list from the plan steps. Implement one step at a time, verifying each (lint, type-check, test) before marking complete. If a step fails verification 3 times, revert and consult a senior reviewer agent.
 
 **Gate**: All todos completed. No scope creep — do not add features, refactor adjacent code, or fix pre-existing issues not in the plan.
 
