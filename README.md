@@ -2,11 +2,6 @@
 
 ---
 
----
-name: proposal
-description: This skill should be used when the user asks to "add a feature", "implement something", "create a new functionality", "build X", "make a proposal", "I want to add", "I need a new", or describes a project-related change that requires planning before implementation. Provides a structured 4-phase workflow: Elicit → Plan → Execute → Review, ensuring complete requirement understanding, plan-user alignment, and change verification before delivery.
-disable-model-invocation: false
----
 
 # Proposal - Structured Feature Development Workflow
 
@@ -269,3 +264,4 @@ Only when ALL gates pass:
 - **`references/grill-questions.md`** — Full Elicit-phase skill integration guide: brainstorming 9-step checklist, grill-me 4 hard rules, gate procedures, and anti-patterns
 - **`references/plan-template.md`** — Full plan document template with all sections
 - **`references/traceability-matrix.md`** — Detailed traceability matrix format and examples
+
